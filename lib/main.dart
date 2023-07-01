@@ -138,20 +138,31 @@ class _MyHomePageState extends State<MyHomePage> {
                         ],
                       ),
                     ),
-                    Image.asset(
-                      'images/corgi.jpg',
-                      width: 250,
-                      height: 250,
+                    Card(
+                      elevation: 10,
+                      child: Column(
+                        children: <Widget>[
+                          Image.asset(
+                            'images/pinscher.webp',
+                            width: 300,
+                            height: 250,
+                          ),
+                          Text("Plantations"),
+                        ],
+                      ),
                     ),
-                    Image.asset(
-                      'images/pinscher.webp',
-                      width: 250,
-                      height: 250,
-                    ),
-                    Image.asset(
-                      'images/dalmata.webp',
-                      width: 250,
-                      height: 250,
+                    Card(
+                      elevation: 10,
+                      child: Column(
+                        children: <Widget>[
+                          Image.asset(
+                            'images/dalmata.webp',
+                            width: 300,
+                            height: 250,
+                          ),
+                          Text("Plantations"),
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -160,25 +171,57 @@ class _MyHomePageState extends State<MyHomePage> {
                   spacing: 8.0,
                   runSpacing: 4.0,
                   children: [
-                    Image.asset(
-                      'images/samoieda.jpg',
-                      width: 250,
-                      height: 250,
+                     Card(
+                      elevation: 10,
+                      child: Column(
+                        children: <Widget>[
+                          Image.asset(
+                            'images/samoieda.jpg',
+                            width: 300,
+                            height: 250,
+                          ),
+                          Text("Plantations"),
+                        ],
+                      ),
                     ),
-                    Image.asset(
-                      'images/pug.png',
-                      width: 250,
-                      height: 250,
+                    Card(
+                      elevation: 10,
+                      child: Column(
+                        children: <Widget>[
+                          Image.asset(
+                            'images/pug.png',
+                            width: 300,
+                            height: 250,
+                          ),
+                          Text("Plantations"),
+                        ],
+                      ),
                     ),
-                    Image.asset(
-                      'images/golden.jpg',
-                      width: 250,
-                      height: 250,
+                    Card(
+                      elevation: 10,
+                      child: Column(
+                        children: <Widget>[
+                          Image.asset(
+                            'images/golden.jpg',
+                            width: 300,
+                            height: 250,
+                          ),
+                          Text("Plantations"),
+                        ],
+                      ),
                     ),
-                    Image.asset(
-                      'images/husky.webp',
-                      width: 250,
-                      height: 250,
+                    Card(
+                      elevation: 10,
+                      child: Column(
+                        children: <Widget>[
+                          Image.asset(
+                            'images/husky.webp',
+                            width: 300,
+                            height: 250,
+                          ),
+                          Text("Plantations"),
+                        ],
+                      ),
                     ),
                   ],
                 ),
