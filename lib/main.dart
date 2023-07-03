@@ -13,23 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'API Front',
-      theme: ThemeData.dark(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a blue toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        //colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      theme: ThemeData(
+        colorScheme:
+            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 218, 149, 32)),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'API Front'),
@@ -39,15 +25,6 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
 
   final String title;
 
@@ -60,41 +37,31 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
       _counter++;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
         title: Padding(
           padding: EdgeInsets.all(15),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Image.asset(
-                'Images/senac.png',
+                'assets/images/senac.png',
                 scale: 30,
               ),
-              Text('CEP Cora Coralina'),
+              Text('CEP Cora Coralina',
+              style: TextStyle(
+                fontSize: 30,
+                fontFamily: 'Georgia',
+                color: Color.fromARGB(255, 14, 61, 190),
+              ),
+              ),
             ],
           ),
         ),
@@ -109,154 +76,252 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Wrap(
-                  spacing: 20.0,
-                  runSpacing: 10.0,
+                  spacing: 8.0,
+                  runSpacing: 4.0,
                   children: [
-                    Card(
-                      elevation: 10,
-                      child: Column(
-                        children: <Widget>[
-                          Image.asset(
-                            'images/border-collie.jpeg',
-                            width: 300,
-                            height: 250,
-                          ),
-                          Text("Plantations"),
-                        ],
+                    Expanded(
+                      child: Card(
+                        elevation: 10,
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset(
+                              'assets/images/backend.jpg',
+                              width: 300,
+                              height: 200,
+                            ),
+                            Text("Programador de Sistemas \n 200h", 
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontFamily: 'Georgia',
+                                color: Color.fromARGB(255, 14, 61, 190),
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                    Card(
-                      elevation: 10,
-                      child: Column(
-                        children: <Widget>[
-                          Image.asset(
-                            'images/corgi.jpg',
-                            width: 300,
-                            height: 250,
-                          ),
-                          Text("Plantations"),
-                        ],
+                    Expanded(
+                        child: Card(
+                        elevation: 10,
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset(
+                              'assets/images/informaticabasica.jpg',
+                              width: 300,
+                              height: 200,
+                            ),
+                            Text("Informática Fundamental \n 60h", 
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Georgia',
+                                  color: Color.fromARGB(255, 14, 61, 190),
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                          ],
+                        ),
                       ),
                     ),
-                    Card(
-                      elevation: 10,
-                      child: Column(
-                        children: <Widget>[
-                          Image.asset(
-                            'images/pinscher.webp',
-                            width: 300,
-                            height: 250,
-                          ),
-                          Text("Plantations"),
-                        ],
+                    Expanded(
+                       child: Card(
+                        elevation: 10,
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset(
+                              'assets/images/python.jpeg',
+                              width: 300,
+                              height: 200,
+                            ),
+                            Text("Fundamentos de Python I \n 30h", 
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontFamily: 'Georgia',
+                                color: Color.fromARGB(255, 14, 61, 190),
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                    Card(
-                      elevation: 10,
-                      child: Column(
-                        children: <Widget>[
-                          Image.asset(
-                            'images/dalmata.webp',
-                            width: 300,
-                            height: 250,
-                          ),
-                          Text("Plantations"),
-                        ],
+                    Expanded(
+                      child: Card(
+                        elevation: 10,
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset(
+                              'assets/images/frontend.jpeg',
+                              width: 300,
+                              height: 200,
+                            ),
+                            Text("Desenvolvedor WEB Front-End \n 108h",
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontFamily: 'Georgia',
+                                color: Color.fromARGB(255, 14, 61, 190),
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
+
                   ],
                 ),
+                SizedBox(height: 10),
                 Wrap(
                   //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   spacing: 8.0,
                   runSpacing: 4.0,
                   children: [
-                     Card(
-                      elevation: 10,
-                      child: Column(
-                        children: <Widget>[
-                          Image.asset(
-                            'images/samoieda.jpg',
-                            width: 300,
-                            height: 250,
+                     Expanded(
+                        child: Card(
+                        elevation: 10,
+                          child: Column(
+                            children: <Widget>[
+                              Image.asset(
+                                'assets/images/assistenteadm.jpg',
+                                width: 290,
+                                height: 200,
+                              ),
+                              Text("Assistente Administrativo \n 160h",
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    fontFamily: 'Georgia',
+                                    color: Color.fromARGB(255, 14, 61, 190),
+                                  ),
+                                  textAlign: TextAlign.center,
+                              ),
+                            ],
                           ),
-                          Text("Plantations"),
-                        ],
-                      ),
-                    ),
-                    Card(
-                      elevation: 10,
-                      child: Column(
-                        children: <Widget>[
-                          Image.asset(
-                            'images/pug.png',
-                            width: 300,
-                            height: 250,
+                        ),
+                     ),
+                     
+                      Expanded(
+                        child: Card(
+                        elevation: 10,
+                          child: Column(
+                            children: <Widget>[
+                              Image.asset(
+                                'assets/images/operacomp.png',
+                                width: 300,
+                                height: 200,
+                              ),
+                              Text("Operador de Computador \n 196h",
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    fontFamily: 'Georgia',
+                                    color: Color.fromARGB(255, 14, 61, 190),
+                                  ),
+                                  textAlign: TextAlign.center,
+                              ),
+                            ],
                           ),
-                          Text("Plantations"),
-                        ],
+                        ),
                       ),
-                    ),
-                    Card(
-                      elevation: 10,
-                      child: Column(
-                        children: <Widget>[
-                          Image.asset(
-                            'images/golden.jpg',
-                            width: 300,
-                            height: 250,
+                      Expanded(
+                        child: Card(
+                        elevation: 10,
+                          child: Column(
+                            children: <Widget>[
+                              Image.asset(
+                                'assets/images/dba.jpg',
+                                width: 300,
+                                height: 200,
+                              ),
+                              Text("Administrador de Banco de Dados \n 200h",
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    fontFamily: 'Georgia',
+                                    color: Color.fromARGB(255, 14, 61, 190),
+                                  ),
+                                  textAlign: TextAlign.center,
+                              ),
+                            ],
                           ),
-                          Text("Plantations"),
-                        ],
+                        ),
                       ),
-                    ),
-                    Card(
-                      elevation: 10,
-                      child: Column(
-                        children: <Widget>[
-                          Image.asset(
-                            'images/husky.webp',
-                            width: 300,
-                            height: 250,
+                      Expanded(
+                       child: Card(
+                        elevation: 10,
+                          child: Column(
+                            children: <Widget>[
+                              Image.asset(
+                                'assets/images/cftv.jpg',
+                                width: 290,
+                                height: 200,
+                              ),
+                              Text("Instalador de Sistemas \n Eletroeletrônicos e CFTV \n 200h",
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    fontFamily: 'Georgia',
+                                    color: Color.fromARGB(255, 14, 61, 190),
+                                  ),
+                                  textAlign: TextAlign.center,
+                              ),
+                            ],
                           ),
-                          Text("Plantations"),
-                        ],
+                        ),
                       ),
-                    ),
                   ],
                 ),
+                SizedBox(height: 10),
+                 Wrap(
+                  //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  spacing: 8.0,
+                  runSpacing: 4.0,
+                  children: [
+                     Expanded(
+                          child: Card(
+                          elevation: 10,
+                            child: Column(
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/tecadm.jpg',
+                                  width: 300,
+                                  height: 200,
+                                ),
+                                Text("Técnico em Administração \n 1000h",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontFamily: 'Georgia',
+                                      color: Color.fromARGB(255, 14, 61, 190),
+                                    ),
+                                    textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
+                      ),
+                      Expanded( 
+                          child: Card(
+                          elevation: 10,
+                            child: Column(
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/tecinfor.jpg',
+                                  width: 300,
+                                  height: 193,
+                                ),
+                                Text("Técnico em Informática \n 1200h",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontFamily: 'Georgia',
+                                      color: Color.fromARGB(255, 14, 61, 190),
+                                    ),
+                                    textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
+                      ),
+                  ],
+                  ),
               ],
             ),
           ),
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          //mainAxisAlignment: MainAxisAlignment.center,
-          //children: <Widget>[
-          //ClipRRect(
-          //borderRadius: BorderRadius.circular(200),
-          //child: SizedBox.fromSize(
-          // child: Image.asset('images/gato2.jpg', width: 400),
-          // ),
-          //),
-          //Text("Estou aqui!",
-          //style: TextStyle(
-          //fontSize: 30.0,
-          //fontFamily: 'Futura',
-          // fontWeight: FontWeight.bold,
-          // color: Colors.deepPurple,
-          //)),
-          //],
         ),
       ),
     );

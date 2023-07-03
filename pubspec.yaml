@@ -1,5 +1,6 @@
-name: api_front
+name: flutter_app
 description: A new Flutter project.
+
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -19,7 +20,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.5 <4.0.0'
+  sdk: '>=2.18.2 <3.0.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -60,21 +61,21 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/gato2.jpg
-    - images/senac.png
-    - images/border-collie.jpeg
-    - images/beagle.webp
-    - images/corgi.jpg
-    - images/daschund.jpg
-    - images/dalmata.webp
-    - images/golden.jpg
-    - images/husky.webp
-    - images/pinscher.webp
-    - images/pug.png
-    - images/samoieda.jpg
-    - images/saobernardo.jpg
-    - images/caramelinho.webp
-  #   - images/a_dot_burr.jpeg
+    - assets/
+    - assets/images/
+    - assets/images/border-collie.jpeg
+    - assets/images/senac.png
+    - assets/images/informaticabasica.jpg
+    - assets/images/python.jpeg
+    - assets/images/frontend.jpeg
+    - assets/images/assistenteadm.jpg
+    - assets/images/operacomp.png
+    - assets/images/dba.jpg
+    - assets/images/backend.jpg
+    - assets/images/cftv.jpg
+    - assets/images/tecadm.jpg
+    - assets/images/tecinfor.jpg
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
